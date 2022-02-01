@@ -8,9 +8,9 @@ class Statement {
     createStatement() {
         let statementLines = []
         for (const transaction of this.transactions) {
-            statementLines.push = (transaction.date + ',' + transaction.amount + ',,' + transaction.amount)
+            statementLines.push(transaction.date + ',' + transaction.amount + ',,' + transaction.balance)
+            console.log(statementLines)
         }
-        statementLines.reverse()
         statementLines.unshift('date,credit,debit,balance')
         return statementLines.join('\n')
     }
